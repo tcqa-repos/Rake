@@ -45,6 +45,12 @@ object Build : BuildType({
         step {
             type = "rake-runner"
         }
+         step {
+                type = "rake-runner"
+                param("ui.rakeRunner.rake.trace.invoke.exec.stages.enabled", "true")
+                param("ui.rakeRunner.frameworks.testspec.enabled", "true")
+                param("ui.rakeRunner.frameworks.shoulda.enabled", "true")
+           }
     }
 })
 
